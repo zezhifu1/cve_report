@@ -8,3 +8,9 @@
 The vulnerability occurs in the `fromAddressNat` function.
 
 ![Image 1](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat1.png)
+
+The program retrieves the user input parameter `page` at line 14 but does not perform any size check. When the parameter value is excessively large, it will causes a stack overflow in the `sprintf` function at line 15, which can lead to a program crash or potential exploitation.  
+
+Cross-referenced location: from the `fromAddressNat` function, routed to `AddressNat`, at line 73.
+
+![Image 1](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat2.png)
