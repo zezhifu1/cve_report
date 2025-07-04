@@ -1,9 +1,0 @@
-# Shenzhen Jixiang Tengda Technology Co., Ltd. FH451 has a Remote Code Execution vulnerability
-
-**Vulnerability URL**: [http://0.0.0.0:80/goform/AddressNat](http://0.0.0.0:80/goform/AddressNat)
-
-**Firmware Download Link:** [https://www.tenda.com.cn/material/show/1629](https://www.tenda.com.cn/material/show/1629)
-
-## Vulnerability Analysis
-The vulnerability occurs in the `fromAddressNat` function.
-![Image 1](FH451/FH451/image/fromAddressNat1.png)
