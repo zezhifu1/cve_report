@@ -24,7 +24,7 @@ Cross-referenced location: from the `fromWizardHandle` function, routed to `Wiza
 Further cross-referenced to the `sub_64EAC` function, with attention to lines 44 and 47.
 ![Image 6](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
 
-It can be determined that the vulnerability occurs at the page path `goform/AddressNat`.
+It can be determined that the vulnerability occurs at the page path `goform/WizardHandle`.
 
 ## payload
 ```python
