@@ -8,15 +8,19 @@
 The vulnerability occurs in the `fromAddressNat` function.
 
 ![Image 1](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromWizardHandle1.png)
+
 ![Image 2](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromWizardHandle2.png)
+
 ![Image 3](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromWizardHandle3.png)
 
 This function accepts the `WANT` and `WANS` parameter from a POST request. Within `v45` == 2, this function accepts the `PPW` parameter from a POST request, which is assigned to `sub_3C434(v30, v5)`;. However, since the user has control over the input of `PPW`, the function `decodePwd()` leads to a buffer overflow. The user-supplied `PPW` can exceed the capacity of the `v5` array, which can lead to a program crash or potential exploitation.  
-![Image 4](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromWizardHandle4.png)
-The disassembled code of the function `sub_3C434` is as follows. It can be observed that this function does not perform bounds checking. It copies the `result` parameter byte-by-byte into the `a2` pointer parameter, which may potentially lead to a stack overflow.
 
+![Image 4](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromWizardHandle4.png)
+
+The disassembled code of the function `sub_3C434` is as follows. It can be observed that this function does not perform bounds checking. It copies the `result` parameter byte-by-byte into the `a2` pointer parameter, which may potentially lead to a stack overflow.
 Cross-referenced location: from the `fromWizardHandle` function, routed to `WizardHandle`, at line 18.
 ![Image 5](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromWizardHandle5.png)
+
 Further cross-referenced to the `sub_64EAC` function, with attention to lines 44 and 47.
 ![Image 6](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromAddressNat3.png)
 
