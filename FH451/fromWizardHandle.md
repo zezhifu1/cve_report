@@ -5,7 +5,7 @@
 **Firmware Download Link:** [https://www.tenda.com.cn/material/show/1629](https://www.tenda.com.cn/material/show/1629)
 
 ## Vulnerability Analysis
-The vulnerability occurs in the `fromAddressNat` function.
+The vulnerability occurs in the `fromWizardHandle` function.
 
 ![Image 1](https://github.com/zezhifu1/cve_report/blob/main/FH451/image/fromWizardHandle1.png)
 
