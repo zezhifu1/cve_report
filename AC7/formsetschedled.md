@@ -15,6 +15,7 @@ Cross-referenced location: from the `formSetSchedLed` function, routed to `SetLE
 ![Image 3](https://github.com/zezhifu1/cve_report/blob/main/AC7/image/formSetSchedLed2.png)
 
 Further cross-referenced.
+
 ![Image 4](https://github.com/zezhifu1/cve_report/blob/main/AC7/image/formSetSchedLed3.png)
 
 It can be determined that the vulnerability occurs at the page path `goform/SetLEDCfg`.
@@ -30,5 +31,7 @@ response = requests.post(url, data={"time" : payload})
 
 # reproduce
 ![Image 5](https://github.com/zezhifu1/cve_report/blob/main/AC7/image/formSetSchedLed4.png)
+
 ![Image 6](https://github.com/zezhifu1/cve_report/blob/main/AC7/image/formSetSchedLed5.png)
+
 ![Image 7](https://github.com/zezhifu1/cve_report/blob/main/AC7/image/formSetSchedLed6.png)
