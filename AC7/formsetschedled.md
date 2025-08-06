@@ -7,7 +7,7 @@
 ## Vulnerability Analysis
 The Tenda AC7_V15.03.06.44 firmware has a buffer overflow vulnerability in the `formsetschedled` function
 
-![Image 1](https://github.com/zezhifu1/cve_report/blob/main/AC7/image/formSetSchedLed1.png)
+![Image 1](https://github.com/zezhifu1/cve_report/blob/main/AC7/image/formSetSchedLed.png)
 
 This function accepts `time` and `time_interval` from wp via a POST request. Then, at lines 36 and 37, it calls the `strtok` function twice to extract parts of `time_interval`. At line 40, it passes the extracted results to the `mib2utc` function without any checks. If the input parameter is too large, it will cause the buffer `ali_val` to overflow, which can lead to denial of service or remote code execution.  
 Cross-referenced location: from the `formSetSchedLed` function, routed to `SetLEDCfg`, at line 51.
